@@ -68,7 +68,7 @@
 <p>当你通过 Share Extension 分享文字或 URL，而系统未能直接打开 Vellum 时，扩展会把共享文字或 URL 及创建时间暂存在 Vellum 的 App Group 容器中。主 App 下次读取后会消费并清除这些待处理项目。</p>
 <p>App Store 的 Release 构建不会创建或上传捕捉诊断数据。仅 Debug 构建可能在本机保存最多 30 天的聚合计数和粗粒度耗时桶；这些数据不包含文稿内容、图片、链接、标签、主题、标识符或精确时间，也不会上传。</p>
 <p>你可以在 Vellum 中删除单条记录或主题；移入废纸篓的内容会保留到你清空废纸篓或永久删除。Notion 连接需在集成设置中单独解除，Debug 诊断需在 Debug 构建的开发者设置中单独清除。本机滚动恢复备份、草稿、链接元数据缓存、Notion 导出回执、App Group 待处理分享项目，以及 iOS 管理的系统或钥匙串记录，可能在一次 App 内删除后继续存在，直到按各自生命周期被覆盖、消费、过期或移除。当含图片的记录被永久删除时，不再被资料库引用的本机图片文件可能被移入 Vellum 的 App 内部隔离区。当前版本没有用于清空该隔离区的 App 内控制；这些副本可能保留到后续清理，或直到 iOS 移除 App 容器，且 Vellum 不承诺具体清理时间。卸载时其他系统存储如何处理也由 iOS 决定；Vellum 不承诺卸载会删除钥匙串凭据。已导出的备份和已发送到 Notion 的内容需在各自目的地删除。</p>
-<p>如需提出隐私问题或请求支持，请联系 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>。运营主体或联系人：Yann；法律联系地址：。</p></div>
+<p>如需提出隐私问题或请求支持，请联系 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>。运营主体或联系人：Yann。</p></div>
       </article>
 <article class="localized document" data-copy-lang="en">
         <p class="eyebrow">For Vellum 1.0</p>
@@ -88,7 +88,7 @@
 <p>When you share text or a URL through the Share Extension and iOS cannot open Vellum directly, the extension temporarily stores the shared text or URL and its creation time in Vellum's App Group container. The main app consumes and clears these pending items after it next reads them.</p>
 <p>The App Store Release build does not create or upload capture diagnostics. Debug builds may store on-device aggregate counts and coarse timing buckets for up to 30 days; they contain no note content, images, links, tags, topics, identifiers, or precise timestamps and are never uploaded.</p>
 <p>You can delete individual notes or topics in Vellum. Items moved to Trash remain until you empty Trash or delete them permanently. Disconnect Notion separately in integration settings, and clear Debug diagnostics separately from Developer settings in a Debug build. Local rolling recovery backups, drafts, link-metadata caches, Notion export receipts, pending App Group share items, and system or Keychain records managed by iOS may outlive an in-app deletion until their own lifecycle overwrites, consumes, expires, or removes them. When a note containing images is permanently removed, unreferenced local image files may be moved to Vellum's app-internal quarantine. The current version has no in-app control to purge that quarantine; copies may remain until a later cleanup or until iOS removes the app container, and Vellum does not promise when cleanup occurs. iOS controls how other system storage is handled when the app is uninstalled; Vellum does not promise that uninstalling removes Keychain credentials. Exported backups and content sent to Notion must be deleted at their respective destinations.</p>
-<p>For privacy questions or support, contact <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>. Operator or contact: Yann; legal contact address: .</p></div>
+<p>For privacy questions or support, contact <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>. Operator or contact: Yann.</p></div>
       </article>
 <article class="localized document" data-copy-lang="ja">
         <p class="eyebrow">Vellum 1.0 対応</p>
@@ -108,7 +108,7 @@
 <p>Share ExtensionからテキストまたはURLを共有した際にiOSがVellumを直接開けない場合、共有内容と作成日時をVellumのApp Groupコンテナへ一時保存します。メインAppが次回読み込んだ後、保留中の項目を取り込んで消去します。</p>
 <p>App Store向けのReleaseビルドは、キャプチャ診断データを作成せず、アップロードもしません。Debugビルドのみ、集計値とおおまかな所要時間帯を端末内に最大30日間保存することがあります。ノート内容、画像、リンク、タグ、テーマ、識別子、正確な時刻は含まれず、アップロードもされません。</p>
 <p>Vellumではノートやテーマを個別に削除できます。ゴミ箱へ移動した内容は、ゴミ箱を空にするか完全に削除するまで残ります。Notionとの接続は連携設定から、Debug診断はDebugビルドの開発者設定から、それぞれ個別に消去してください。端末内の世代別復元バックアップ、下書き、リンクメタデータのキャッシュ、Notionの書き出し履歴、App Groupに保留中の共有項目、iOSが管理するシステム領域やキーチェーンの記録は、App内で項目を削除した後も、それぞれの仕組みによって上書き、取り込み、期限切れ、または消去されるまで残る場合があります。画像を含むノートを完全に削除すると、参照されなくなった端末内の画像ファイルがVellumのApp内部の隔離領域へ移されることがあります。現在のバージョンにはこの隔離領域を消去するApp内操作がなく、コピーは後のクリーンアップまたはiOSによるAppコンテナの削除まで残る場合があります。Vellumはクリーンアップ時期を保証しません。Appをアンインストールした際のその他のシステム領域の扱いはiOSが管理するため、キーチェーン内の認証情報が削除されることをVellumは保証しません。書き出したバックアップとNotionへ送信済みの内容は、それぞれの保存先で削除してください。</p>
-<p>プライバシーに関する質問またはサポートについては、<a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>までご連絡ください。運営者または担当者：Yann、法的通知の送付先：。</p></div>
+<p>プライバシーに関する質問またはサポートについては、<a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>までご連絡ください。運営者または担当者：Yann。</p></div>
       </article>
 <article class="localized document" data-copy-lang="ko">
         <p class="eyebrow">Vellum 1.0용</p>
@@ -128,7 +128,7 @@
 <p>Share Extension으로 텍스트나 URL을 공유했지만 iOS가 Vellum을 직접 열지 못한 경우, 공유 내용과 작성 시각을 Vellum의 App Group 컨테이너에 임시 저장합니다. 메인 앱이 다음에 이를 읽은 후 대기 중인 항목을 가져오고 지웁니다.</p>
 <p>App Store용 Release 빌드는 캡처 진단 데이터를 생성하거나 업로드하지 않습니다. Debug 빌드에서만 집계 값과 대략적인 소요 시간 구간을 기기에 최대 30일 동안 저장할 수 있습니다. 여기에는 노트 내용, 이미지, 링크, 태그, 주제, 식별자, 정확한 시각이 포함되지 않으며 업로드되지 않습니다.</p>
 <p>Vellum에서는 노트나 주제를 개별적으로 삭제할 수 있습니다. 휴지통으로 이동한 콘텐츠는 휴지통을 비우거나 영구 삭제할 때까지 남습니다. Notion 연결은 통합 설정에서, Debug 진단은 Debug 빌드의 개발자 설정에서 각각 따로 지워야 합니다. 기기 내 순환 복구 백업, 초안, 링크 메타데이터 캐시, Notion 내보내기 기록, App Group에서 대기 중인 공유 항목, iOS가 관리하는 시스템 또는 키체인 기록은 앱에서 항목을 삭제한 후에도 각 저장소의 수명 주기에 따라 덮어쓰기, 가져오기, 만료 또는 삭제될 때까지 남을 수 있습니다. 이미지가 포함된 노트를 영구 삭제하면 더 이상 참조되지 않는 로컬 이미지 파일이 Vellum의 앱 내부 격리 영역으로 이동될 수 있습니다. 현재 버전에는 이 격리 영역을 비우는 앱 내 제어 기능이 없으며, 사본은 이후 정리 작업 또는 iOS가 앱 컨테이너를 제거할 때까지 남을 수 있습니다. Vellum은 정리 시점을 보장하지 않습니다. 앱을 제거할 때 그 밖의 시스템 저장 공간을 처리하는 방식은 iOS가 관리하므로 키체인 인증 정보까지 삭제된다고 Vellum은 보장하지 않습니다. 내보낸 백업과 Notion으로 보낸 콘텐츠는 각각의 저장 위치에서 삭제해야 합니다.</p>
-<p>개인정보 관련 문의 또는 지원은 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>로 연락해 주세요. 운영자 또는 담당자: Yann, 법적 고지 주소: .</p></div>
+<p>개인정보 관련 문의 또는 지원은 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>로 연락해 주세요. 운영자 또는 담당자: Yann.</p></div>
       </article>
   </main>
     <footer>
