@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="How Vellum stores and handles your data.">
+  <meta property="og:title" content="Vellum Privacy Policy">
+  <meta property="og:description" content="How Vellum stores and handles your data.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="__SITE_ORIGIN__/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__SITE_ORIGIN__/assets/og.jpg">
+  <title>Vellum Privacy Policy</title>
+  <link rel="icon" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+    <a class="brand" href="/" aria-label="Vellum home"><span class="brand-mark">V</span><span>Vellum</span></a>
+    <nav aria-label="Primary navigation">
+      <div class="localized nav-copy" data-copy-lang="zh-Hans">
+        <a href="/">首页</a>
+        <a href="/privacy" aria-current="page">隐私</a>
+        <a href="/support">支持</a>
+      </div>
+<div class="localized nav-copy" data-copy-lang="en">
+        <a href="/">Home</a>
+        <a href="/privacy" aria-current="page">Privacy</a>
+        <a href="/support">Support</a>
+      </div>
+<div class="localized nav-copy" data-copy-lang="ja">
+        <a href="/">ホーム</a>
+        <a href="/privacy" aria-current="page">プライバシー</a>
+        <a href="/support">サポート</a>
+      </div>
+<div class="localized nav-copy" data-copy-lang="ko">
+        <a href="/">홈</a>
+        <a href="/privacy" aria-current="page">개인정보</a>
+        <a href="/support">지원</a>
+      </div>
+    </nav>
+  </header>
+    <main class="document-main">
+    <div class="document-tools"><div class="language-picker" aria-label="Language">
+    <button type="button" data-language="zh-Hans" aria-pressed="false">简体中文</button>
+<button type="button" data-language="en" aria-pressed="false">English</button>
+<button type="button" data-language="ja" aria-pressed="false">日本語</button>
+<button type="button" data-language="ko" aria-pressed="false">한국어</button>
+  </div></div>
+    <article class="localized document" data-copy-lang="zh-Hans">
+        <p class="eyebrow">适用于 Vellum 1.0</p>
+        <h1>Vellum 隐私政策</h1>
+        <p class="document-intro">了解 Vellum 如何在设备上保存内容，以及何时会与 Notion 或链接网站通信。</p>
+        <div class="document-meta">
+          <span>运营者: Yann</span>
+          <span>联系邮箱: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
+        </div>
+        <div class="prose"><p>生效日期：2026年7月29日</p>
+<p>Vellum 会把资料库（包括主题、文字记录、图片和标签）以及偏好设置和自动生成的本机恢复备份保存在你的设备上。Vellum 不启用 iCloud 同步。你也可以把完整备份导出到自己选择的位置；导出后的文件由你保管，不再受 Vellum 控制。</p>
+<p>连接 Notion 时，Vellum 会把 OAuth 凭据、工作区信息和 Vellum 资料库目标标识符保存在本机钥匙串或 App 设置中。连接流程可能在你的 Notion 工作区创建一个名为“Vellum”的页面和一个名为“Library”的数据库。</p>
+<p>只有在你主动选择“发送到 Notion”后，Vellum 才会通过 Notion 服务发送所选主题的页面标题和渲染后的 Markdown。Markdown 包含主题副标题、标签、创建与更新时间，以及每条记录的正文、备注、标签和创建时间；如果记录含有图片，只会写入图片数量说明。当前 Notion 集成不会上传图片文件或图片字节。Notion 会按照你所连接账户的设置及其隐私条款处理和存储这些内容。Vellum 不会把资料库内容发送到开发者服务器。</p>
+<p>对于记录中已有的 HTTP(S) 链接，Vellum 可能使用系统 LinkPresentation 框架访问相应网站以取得链接元数据。本机缓存仅包含页面标题、规范 URL 和主机名，并以对应的本地记录标识符为键；缓存不包含网页正文，也不会进入资料库备份或导出内容。</p>
+<p>从相册图片、相机或系统文字扫描器识别文字时，Vellum 使用设备上的系统 OCR 能力；图片与识别结果不会为 OCR 发送到开发者服务器。</p>
+<p>为了让你能从设备搜索中打开内容，Vellum 会在本机 Spotlight 索引中写入标题、所属主题、标签和最多 240 个字符的文字片段；不会写入完整正文、图片或备份文件。</p>
+<p>当你通过 Share Extension 分享文字或 URL，而系统未能直接打开 Vellum 时，扩展会把共享文字或 URL 及创建时间暂存在 Vellum 的 App Group 容器中。主 App 下次读取后会消费并清除这些待处理项目。</p>
+<p>App Store 的 Release 构建不会创建或上传捕捉诊断数据。仅 Debug 构建可能在本机保存最多 30 天的聚合计数和粗粒度耗时桶；这些数据不包含文稿内容、图片、链接、标签、主题、标识符或精确时间，也不会上传。</p>
+<p>你可以在 Vellum 中删除单条记录或主题；移入废纸篓的内容会保留到你清空废纸篓或永久删除。Notion 连接需在集成设置中单独解除，Debug 诊断需在 Debug 构建的开发者设置中单独清除。本机滚动恢复备份、草稿、链接元数据缓存、Notion 导出回执、App Group 待处理分享项目，以及 iOS 管理的系统或钥匙串记录，可能在一次 App 内删除后继续存在，直到按各自生命周期被覆盖、消费、过期或移除。当含图片的记录被永久删除时，不再被资料库引用的本机图片文件可能被移入 Vellum 的 App 内部隔离区。当前版本没有用于清空该隔离区的 App 内控制；这些副本可能保留到后续清理，或直到 iOS 移除 App 容器，且 Vellum 不承诺具体清理时间。卸载时其他系统存储如何处理也由 iOS 决定；Vellum 不承诺卸载会删除钥匙串凭据。已导出的备份和已发送到 Notion 的内容需在各自目的地删除。</p>
+<p>如需提出隐私问题或请求支持，请联系 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>。运营主体或联系人：Yann；法律联系地址：。</p></div>
+      </article>
+<article class="localized document" data-copy-lang="en">
+        <p class="eyebrow">For Vellum 1.0</p>
+        <h1>Vellum Privacy Policy</h1>
+        <p class="document-intro">Learn how Vellum stores content on your device and when it communicates with Notion or linked websites.</p>
+        <div class="document-meta">
+          <span>Operator: Yann</span>
+          <span>Contact: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
+        </div>
+        <div class="prose"><p>Effective date: July 29, 2026</p>
+<p>Vellum stores your library—including topics, text notes, images, and tags—along with preferences and automatically created local recovery backups on your device. Vellum does not enable iCloud sync. You can also export a complete backup to a location you choose; exported files remain under your control and are no longer managed by Vellum.</p>
+<p>When you connect Notion, Vellum stores OAuth credentials, workspace information, and Vellum library destination identifiers locally in the Keychain or app settings. The connection flow may create a page named Vellum and a database named Library in your Notion workspace.</p>
+<p>Only when you choose Send to Notion does Vellum use Notion's service to send the selected topic's page title and rendered Markdown. The Markdown contains the topic subtitle, tags, creation and update times, plus each note's body, supplementary notes, tags, and creation time. If a note has images, the Markdown contains only an image-count statement. The current Notion integration does not upload image files or image bytes. Notion processes and stores the transmitted content according to your connected account settings and its privacy terms. Vellum does not send library content to the developer's servers.</p>
+<p>For HTTP(S) links already contained in a note, Vellum may use the system LinkPresentation framework to contact the linked website and retrieve metadata. The cached page title, canonical URL, and host name are keyed by the corresponding local note identifier. The cache does not contain the page body and is not included in library backups or exports.</p>
+<p>When recognizing text from a photo, camera, or the system text scanner, Vellum uses on-device system OCR capabilities. Images and recognized text are not sent to the developer's servers for OCR.</p>
+<p>To let you open content from device search, Vellum writes the title, topic, tags, and a text snippet of up to 240 characters to an on-device Spotlight index. It does not index full note bodies, images, or backup files.</p>
+<p>When you share text or a URL through the Share Extension and iOS cannot open Vellum directly, the extension temporarily stores the shared text or URL and its creation time in Vellum's App Group container. The main app consumes and clears these pending items after it next reads them.</p>
+<p>The App Store Release build does not create or upload capture diagnostics. Debug builds may store on-device aggregate counts and coarse timing buckets for up to 30 days; they contain no note content, images, links, tags, topics, identifiers, or precise timestamps and are never uploaded.</p>
+<p>You can delete individual notes or topics in Vellum. Items moved to Trash remain until you empty Trash or delete them permanently. Disconnect Notion separately in integration settings, and clear Debug diagnostics separately from Developer settings in a Debug build. Local rolling recovery backups, drafts, link-metadata caches, Notion export receipts, pending App Group share items, and system or Keychain records managed by iOS may outlive an in-app deletion until their own lifecycle overwrites, consumes, expires, or removes them. When a note containing images is permanently removed, unreferenced local image files may be moved to Vellum's app-internal quarantine. The current version has no in-app control to purge that quarantine; copies may remain until a later cleanup or until iOS removes the app container, and Vellum does not promise when cleanup occurs. iOS controls how other system storage is handled when the app is uninstalled; Vellum does not promise that uninstalling removes Keychain credentials. Exported backups and content sent to Notion must be deleted at their respective destinations.</p>
+<p>For privacy questions or support, contact <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>. Operator or contact: Yann; legal contact address: .</p></div>
+      </article>
+<article class="localized document" data-copy-lang="ja">
+        <p class="eyebrow">Vellum 1.0 対応</p>
+        <h1>Vellum プライバシーポリシー</h1>
+        <p class="document-intro">Vellumが端末内にコンテンツを保存する方法と、Notionやリンク先サイトと通信する場合について説明します。</p>
+        <div class="document-meta">
+          <span>運営者: Yann</span>
+          <span>連絡先: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
+        </div>
+        <div class="prose"><p>施行日：2026年7月29日</p>
+<p>Vellumは、テーマ、テキストノート、画像、タグを含むライブラリに加え、環境設定と自動作成される端末内の復元用バックアップをデバイスに保存します。iCloud同期は使用しません。完全なバックアップを任意の場所へ書き出すこともできます。書き出したファイルはユーザー自身の管理下に置かれ、Vellumでは管理されません。</p>
+<p>Notionに接続すると、VellumはOAuth認証情報、ワークスペース情報、Vellumライブラリの保存先識別子をキーチェーンまたはAppの設定に保存します。接続時に、Notionワークスペース内へ「Vellum」というページと「Library」というデータベースを作成する場合があります。</p>
+<p>ユーザーが「Notionへ送信」を選んだ場合に限り、VellumはNotionのサービスを通じて、選択したテーマのページタイトルと変換済みMarkdownを送信します。Markdownにはテーマのサブタイトル、タグ、作成日時、更新日時のほか、各ノートの本文、補足メモ、タグ、作成日時が含まれます。画像がある場合は枚数を示す文章だけが含まれ、現在のNotion連携では画像ファイルや画像データをアップロードしません。送信内容は、接続先アカウントの設定とNotionのプライバシー条件に基づいてNotionが処理・保存します。Vellumがライブラリ内容を開発者のサーバーへ送信することはありません。</p>
+<p>ノート内のHTTP(S)リンクについて、VellumはシステムのLinkPresentationフレームワークを使用してリンク先へアクセスし、メタデータを取得することがあります。キャッシュするページタイトル、正規化URL、ホスト名は、対応する端末内ノートの識別子をキーとして保存します。Webページ本文は保存せず、ライブラリのバックアップや書き出しにも含めません。</p>
+<p>写真、カメラ、またはシステムのテキストスキャナから文字を認識する際は、デバイス上のシステムOCR機能を使用します。OCRのために画像や認識結果を開発者のサーバーへ送信することはありません。</p>
+<p>デバイス検索から内容を開けるようにするため、Vellumはタイトル、所属テーマ、タグ、および最大240文字の本文抜粋を端末内のSpotlight索引へ登録します。ノート全文、画像、バックアップファイルは登録しません。</p>
+<p>Share ExtensionからテキストまたはURLを共有した際にiOSがVellumを直接開けない場合、共有内容と作成日時をVellumのApp Groupコンテナへ一時保存します。メインAppが次回読み込んだ後、保留中の項目を取り込んで消去します。</p>
+<p>App Store向けのReleaseビルドは、キャプチャ診断データを作成せず、アップロードもしません。Debugビルドのみ、集計値とおおまかな所要時間帯を端末内に最大30日間保存することがあります。ノート内容、画像、リンク、タグ、テーマ、識別子、正確な時刻は含まれず、アップロードもされません。</p>
+<p>Vellumではノートやテーマを個別に削除できます。ゴミ箱へ移動した内容は、ゴミ箱を空にするか完全に削除するまで残ります。Notionとの接続は連携設定から、Debug診断はDebugビルドの開発者設定から、それぞれ個別に消去してください。端末内の世代別復元バックアップ、下書き、リンクメタデータのキャッシュ、Notionの書き出し履歴、App Groupに保留中の共有項目、iOSが管理するシステム領域やキーチェーンの記録は、App内で項目を削除した後も、それぞれの仕組みによって上書き、取り込み、期限切れ、または消去されるまで残る場合があります。画像を含むノートを完全に削除すると、参照されなくなった端末内の画像ファイルがVellumのApp内部の隔離領域へ移されることがあります。現在のバージョンにはこの隔離領域を消去するApp内操作がなく、コピーは後のクリーンアップまたはiOSによるAppコンテナの削除まで残る場合があります。Vellumはクリーンアップ時期を保証しません。Appをアンインストールした際のその他のシステム領域の扱いはiOSが管理するため、キーチェーン内の認証情報が削除されることをVellumは保証しません。書き出したバックアップとNotionへ送信済みの内容は、それぞれの保存先で削除してください。</p>
+<p>プライバシーに関する質問またはサポートについては、<a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>までご連絡ください。運営者または担当者：Yann、法的通知の送付先：。</p></div>
+      </article>
+<article class="localized document" data-copy-lang="ko">
+        <p class="eyebrow">Vellum 1.0용</p>
+        <h1>Vellum 개인정보 처리방침</h1>
+        <p class="document-intro">Vellum이 기기에 콘텐츠를 저장하는 방식과 Notion 또는 링크된 웹사이트와 통신하는 경우를 설명합니다.</p>
+        <div class="document-meta">
+          <span>운영자: Yann</span>
+          <span>연락처: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
+        </div>
+        <div class="prose"><p>시행일: 2026년 7월 29일</p>
+<p>Vellum은 주제, 텍스트 노트, 이미지, 태그가 포함된 라이브러리와 환경설정, 자동 생성되는 기기 내 복구 백업을 사용자의 기기에 저장합니다. iCloud 동기화는 사용하지 않습니다. 전체 백업을 원하는 위치로 내보낼 수도 있습니다. 내보낸 파일은 사용자가 직접 관리하며 더 이상 Vellum의 관리 대상이 아닙니다.</p>
+<p>Notion을 연결하면 Vellum은 OAuth 인증 정보, 워크스페이스 정보, Vellum 라이브러리 대상 식별자를 키체인 또는 앱 설정에 저장합니다. 연결 과정에서 Notion 워크스페이스에 ‘Vellum’ 페이지와 ‘Library’ 데이터베이스를 만들 수 있습니다.</p>
+<p>사용자가 ‘Notion으로 보내기’를 선택한 경우에만 Vellum은 Notion 서비스를 통해 선택한 주제의 페이지 제목과 변환된 Markdown을 전송합니다. Markdown에는 주제의 부제목, 태그, 작성·수정 시각과 각 노트의 본문, 보충 메모, 태그, 작성 시각이 포함됩니다. 이미지가 있는 노트에는 이미지 개수를 알리는 문구만 포함되며, 현재 Notion 통합에서는 이미지 파일이나 이미지 데이터를 업로드하지 않습니다. 전송된 콘텐츠는 연결된 계정 설정과 Notion의 개인정보 보호 조건에 따라 Notion이 처리하고 저장합니다. Vellum은 라이브러리 콘텐츠를 개발자 서버로 보내지 않습니다.</p>
+<p>노트에 포함된 HTTP(S) 링크의 경우 Vellum은 시스템 LinkPresentation 프레임워크를 사용해 링크된 웹사이트에 접속하고 메타데이터를 가져올 수 있습니다. 캐시되는 페이지 제목, 정규 URL, 호스트 이름은 해당 로컬 노트 식별자를 키로 저장됩니다. 웹페이지 본문은 저장하지 않으며 라이브러리 백업이나 내보내기에도 포함하지 않습니다.</p>
+<p>사진, 카메라 또는 시스템 텍스트 스캐너에서 문자를 인식할 때는 기기의 시스템 OCR 기능을 사용합니다. OCR을 위해 이미지나 인식 결과를 개발자 서버로 전송하지 않습니다.</p>
+<p>기기 검색에서 콘텐츠를 열 수 있도록 Vellum은 제목, 소속 주제, 태그, 최대 240자의 본문 일부를 기기 내 Spotlight 색인에 기록합니다. 노트 전체 본문, 이미지, 백업 파일은 색인에 기록하지 않습니다.</p>
+<p>Share Extension으로 텍스트나 URL을 공유했지만 iOS가 Vellum을 직접 열지 못한 경우, 공유 내용과 작성 시각을 Vellum의 App Group 컨테이너에 임시 저장합니다. 메인 앱이 다음에 이를 읽은 후 대기 중인 항목을 가져오고 지웁니다.</p>
+<p>App Store용 Release 빌드는 캡처 진단 데이터를 생성하거나 업로드하지 않습니다. Debug 빌드에서만 집계 값과 대략적인 소요 시간 구간을 기기에 최대 30일 동안 저장할 수 있습니다. 여기에는 노트 내용, 이미지, 링크, 태그, 주제, 식별자, 정확한 시각이 포함되지 않으며 업로드되지 않습니다.</p>
+<p>Vellum에서는 노트나 주제를 개별적으로 삭제할 수 있습니다. 휴지통으로 이동한 콘텐츠는 휴지통을 비우거나 영구 삭제할 때까지 남습니다. Notion 연결은 통합 설정에서, Debug 진단은 Debug 빌드의 개발자 설정에서 각각 따로 지워야 합니다. 기기 내 순환 복구 백업, 초안, 링크 메타데이터 캐시, Notion 내보내기 기록, App Group에서 대기 중인 공유 항목, iOS가 관리하는 시스템 또는 키체인 기록은 앱에서 항목을 삭제한 후에도 각 저장소의 수명 주기에 따라 덮어쓰기, 가져오기, 만료 또는 삭제될 때까지 남을 수 있습니다. 이미지가 포함된 노트를 영구 삭제하면 더 이상 참조되지 않는 로컬 이미지 파일이 Vellum의 앱 내부 격리 영역으로 이동될 수 있습니다. 현재 버전에는 이 격리 영역을 비우는 앱 내 제어 기능이 없으며, 사본은 이후 정리 작업 또는 iOS가 앱 컨테이너를 제거할 때까지 남을 수 있습니다. Vellum은 정리 시점을 보장하지 않습니다. 앱을 제거할 때 그 밖의 시스템 저장 공간을 처리하는 방식은 iOS가 관리하므로 키체인 인증 정보까지 삭제된다고 Vellum은 보장하지 않습니다. 내보낸 백업과 Notion으로 보낸 콘텐츠는 각각의 저장 위치에서 삭제해야 합니다.</p>
+<p>개인정보 관련 문의 또는 지원은 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>로 연락해 주세요. 운영자 또는 담당자: Yann, 법적 고지 주소: .</p></div>
+      </article>
+  </main>
+    <footer>
+    <p>© 2026 Yann · Vellum</p>
+    <p class="localized" data-copy-lang="zh-Hans">本网站不使用分析工具、广告追踪或 Cookie。</p>
+<p class="localized" data-copy-lang="en">This website uses no analytics, advertising trackers, or cookies.</p>
+<p class="localized" data-copy-lang="ja">このWebサイトは解析ツール、広告トラッキング、Cookieを使用しません。</p>
+<p class="localized" data-copy-lang="ko">이 웹사이트는 분석 도구, 광고 추적 또는 쿠키를 사용하지 않습니다.</p>
+  </footer>
+  </div>
+</body>
+</html>
