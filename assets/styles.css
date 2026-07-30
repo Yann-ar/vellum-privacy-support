@@ -185,6 +185,20 @@ h1 {
 
 .prose p { margin: 0 0 1.45em; }
 .prose p:first-child { color: var(--muted); font-weight: 620; }
+.prose h2 {
+  margin: 2.2em 0 0.7em;
+  font-size: clamp(22px, 3.2vw, 28px);
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+}
+.prose ul {
+  margin: 0 0 1.65em;
+  padding: 18px 22px 18px 42px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--accent-soft) 46%, transparent);
+}
+.prose li { margin: 0.48em 0; padding-left: 0.25em; }
 
 footer {
   display: grid;
