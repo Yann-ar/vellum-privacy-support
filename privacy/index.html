@@ -53,82 +53,138 @@
     <article class="localized document" data-copy-lang="zh-Hans">
         <p class="eyebrow">适用于 Vellum 1.0</p>
         <h1>Vellum 隐私政策</h1>
-        <p class="document-intro">了解 Vellum 如何在设备上保存内容，以及何时会与 Notion 或链接网站通信。</p>
+        <p class="document-intro">你的文字属于你。了解 Vellum 如何在设备上保存资料，以及哪些操作会产生网络请求。</p>
         <div class="document-meta">
           <span>运营者: Yann</span>
           <span>联系邮箱: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
         </div>
-        <div class="prose"><p>生效日期：2026年7月29日</p>
-<p>Vellum 会把资料库（包括主题、文字记录、图片和标签）以及偏好设置和自动生成的本机恢复备份保存在你的设备上。Vellum 不启用 iCloud 同步。你也可以把完整备份导出到自己选择的位置；导出后的文件由你保管，不再受 Vellum 控制。</p>
-<p>连接 Notion 时，Vellum 会把 OAuth 凭据、工作区信息和 Vellum 资料库目标标识符保存在本机钥匙串或 App 设置中。连接流程可能在你的 Notion 工作区创建一个名为“Vellum”的页面和一个名为“Library”的数据库。</p>
-<p>只有在你主动选择“发送到 Notion”后，Vellum 才会通过 Notion 服务发送所选主题的页面标题和渲染后的 Markdown。Markdown 包含主题副标题、标签、创建与更新时间，以及每条记录的正文、备注、标签和创建时间；如果记录含有图片，只会写入图片数量说明。当前 Notion 集成不会上传图片文件或图片字节。Notion 会按照你所连接账户的设置及其隐私条款处理和存储这些内容。Vellum 不会把资料库内容发送到开发者服务器。</p>
-<p>对于记录中已有的 HTTP(S) 链接，Vellum 可能使用系统 LinkPresentation 框架访问相应网站以取得链接元数据。本机缓存仅包含页面标题、规范 URL 和主机名，并以对应的本地记录标识符为键；缓存不包含网页正文，也不会进入资料库备份或导出内容。</p>
-<p>从相册图片、相机或系统文字扫描器识别文字时，Vellum 使用设备上的系统 OCR 能力；图片与识别结果不会为 OCR 发送到开发者服务器。</p>
-<p>为了让你能从设备搜索中打开内容，Vellum 会在本机 Spotlight 索引中写入标题、所属主题、标签和最多 240 个字符的文字片段；不会写入完整正文、图片或备份文件。</p>
-<p>当你通过 Share Extension 分享文字或 URL，而系统未能直接打开 Vellum 时，扩展会把共享文字或 URL 及创建时间暂存在 Vellum 的 App Group 容器中。主 App 下次读取后会消费并清除这些待处理项目。</p>
-<p>App Store 的 Release 构建不会创建或上传捕捉诊断数据。仅 Debug 构建可能在本机保存最多 30 天的聚合计数和粗粒度耗时桶；这些数据不包含文稿内容、图片、链接、标签、主题、标识符或精确时间，也不会上传。</p>
-<p>你可以在 Vellum 中删除单条记录或主题；移入废纸篓的内容会保留到你清空废纸篓或永久删除。Notion 连接需在集成设置中单独解除，Debug 诊断需在 Debug 构建的开发者设置中单独清除。本机滚动恢复备份、草稿、链接元数据缓存、Notion 导出回执、App Group 待处理分享项目，以及 iOS 管理的系统或钥匙串记录，可能在一次 App 内删除后继续存在，直到按各自生命周期被覆盖、消费、过期或移除。当含图片的记录被永久删除时，不再被资料库引用的本机图片文件可能被移入 Vellum 的 App 内部隔离区。当前版本没有用于清空该隔离区的 App 内控制；这些副本可能保留到后续清理，或直到 iOS 移除 App 容器，且 Vellum 不承诺具体清理时间。卸载时其他系统存储如何处理也由 iOS 决定；Vellum 不承诺卸载会删除钥匙串凭据。已导出的备份和已发送到 Notion 的内容需在各自目的地删除。</p>
-<p>如需提出隐私问题或请求支持，请联系 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>。运营主体或联系人：Yann。</p></div>
+        <div class="prose"><p>生效日期：2026年7月30日</p>
+<h2>重点摘要</h2>
+<ul><li>本机优先 — 文稿、图片与备份默认留在设备上。</li><li>不跟踪 — 不投放广告，不出售个人数据，不跨 App 跟踪。</li><li>由你发起 — 只有你连接或发送时，内容才会进入 Notion。</li></ul>
+<h2>01. 适用范围与核心原则</h2>
+<p>本政策说明 Vellum iOS App 如何处理你在使用过程中产生的信息。Vellum 以本机存储为默认方式，不启用 iCloud 同步；除本政策明确说明的网络功能、你主动导出的文件，以及你选择发送给支持团队的信息外，开发者不会取得你的资料库内容。</p>
+<h2>02. 设备上保存的信息</h2>
+<p>为了提供记录、整理、搜索、恢复与导出功能，Vellum 会在 App 容器、App Group、系统设置或钥匙串中处理以下信息：</p>
+<ul><li>资料库内容：主题、标题、正文、备注、标签、图片、创建与更新时间，以及废纸篓状态。</li><li>辅助数据：偏好设置、草稿、滚动恢复备份、链接元数据缓存、Notion 凭据与导出回执，以及待处理的共享项目。</li><li>系统功能：Spotlight 仅索引标题、主题、标签和最多 240 个字符的片段；本机 OCR 处理相册或相机图片，不为识别文字上传图片。Release 版本不创建捕捉诊断。</li></ul>
+<h2>03. 网络请求与支持沟通</h2>
+<p>Vellum 没有广告或行为分析 SDK，也不会为了画像或营销持续上传使用记录。以下操作会按需产生网络请求：</p>
+<ul><li>链接预览：系统 LinkPresentation 可能访问文稿中的 HTTP(S) 网站以取得标题、规范 URL 和主机名。目标网站及其服务商可能收到常规网络信息，例如 IP 地址；Vellum 不缓存网页正文。</li><li>支持邮件：当你联系我们时，我们会收到你主动提供的邮箱地址、邮件正文和附件，仅用于回复、排查问题和履行必要的法律义务。请勿发送密码、Notion 访问令牌或不必要的敏感文稿。</li></ul>
+<h2>04. Notion 集成与 OAuth 中转</h2>
+<p>Notion 是可选的第三方服务。只有在你主动连接后，Vellum 才会保存授权凭据和工作区标识；只有在你选择“发送到 Notion”时，才会把所选主题的标题、Markdown 正文、标签和时间信息发送给 Notion。图片只发送数量说明，不上传图片文件。Notion 将依其账户设置、条款和隐私政策处理这些内容。</p>
+<p>为保护 Notion 客户端密钥，登录、刷新和解除授权会经过运行在 Cloudflare 上的 Vellum OAuth 中转服务。授权结果会加密保存并在一次性领取后删除，最长约 5 分钟；中转会话的哈希标识及工作区、所有者或机器人标识最长保留 30 天；用于防滥用的 IP 地址哈希计数最长保留约 5 分钟。中转服务不接收你的 Vellum 文稿或图片，也不记录令牌、授权码或文稿内容。</p>
+<h2>05. 共享、广告与跟踪</h2>
+<p>Vellum 不出售、出租个人数据，不投放第三方广告，也不把 App 内数据与其他公司数据结合用于跨 App 或跨网站跟踪。信息只会在你指示的功能所需范围内交给 Apple 的系统服务、链接目标网站、Notion、Cloudflare OAuth 基础设施或你选择的导出目的地；法律强制要求时除外。</p>
+<h2>06. 保留、安全与删除</h2>
+<p>Vellum 使用 iOS App 沙盒、钥匙串和传输加密等平台能力保护信息，但任何存储或传输方式都无法保证绝对安全。文稿移入废纸篓后会保留到你清空或永久删除；Notion 连接需要在集成设置中单独解除；导出文件和已发送到 Notion 的内容必须在各自目的地删除。</p>
+<p>本机滚动备份、草稿、链接缓存、导出回执、待处理共享项目、iOS 管理的索引或钥匙串记录，可能在单项删除后继续存在，直到被覆盖、消费、过期或由系统移除。永久删除含图片的文稿后，未引用的图片可能进入 App 内部隔离区，并保留到后续清理或 iOS 移除 App 容器；当前版本没有单独清空隔离区的控制。</p>
+<h2>07. 你的选择与权利</h2>
+<p>你可以在 App 内查看、编辑、导出和删除资料库内容，关闭 Spotlight 或相机等系统权限，不连接或解除 Notion，并通过卸载 App 停止使用。由于主要资料保存在你的设备上，开发者通常无法代你访问、更正或删除这些内容。若要查询支持邮件或 OAuth 中转涉及的信息，或行使适用法律赋予的权利，请通过下方邮箱联系；我们可能需要合理验证请求。</p>
+<h2>08. 未成年人、变更与联系</h2>
+<p>Vellum 是通用的个人记录工具，不以未达到当地数字同意年龄的儿童为目标，也不要求创建账户或填写年龄。未成年人应在父母或监护人指导下使用；如果你认为儿童通过支持或网络集成功能向我们提供了信息，请联系我们。</p>
+<p>功能或数据处理方式发生实质变化时，我们会更新本政策、生效日期，并通过 App 更新说明或其他适当方式提示。建议你在重要版本更新后再次查看。</p>
+<p>如需提出隐私问题、行使适用法律赋予的权利或请求支持，请联系 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>。运营主体或联系人：Yann。</p></div>
       </article>
 <article class="localized document" data-copy-lang="en">
         <p class="eyebrow">For Vellum 1.0</p>
         <h1>Vellum Privacy Policy</h1>
-        <p class="document-intro">Learn how Vellum stores content on your device and when it communicates with Notion or linked websites.</p>
+        <p class="document-intro">Your words belong to you. Learn what Vellum keeps on your device and which actions make a network request.</p>
         <div class="document-meta">
           <span>Operator: Yann</span>
           <span>Contact: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
         </div>
-        <div class="prose"><p>Effective date: July 29, 2026</p>
-<p>Vellum stores your library—including topics, text notes, images, and tags—along with preferences and automatically created local recovery backups on your device. Vellum does not enable iCloud sync. You can also export a complete backup to a location you choose; exported files remain under your control and are no longer managed by Vellum.</p>
-<p>When you connect Notion, Vellum stores OAuth credentials, workspace information, and Vellum library destination identifiers locally in the Keychain or app settings. The connection flow may create a page named Vellum and a database named Library in your Notion workspace.</p>
-<p>Only when you choose Send to Notion does Vellum use Notion's service to send the selected topic's page title and rendered Markdown. The Markdown contains the topic subtitle, tags, creation and update times, plus each note's body, supplementary notes, tags, and creation time. If a note has images, the Markdown contains only an image-count statement. The current Notion integration does not upload image files or image bytes. Notion processes and stores the transmitted content according to your connected account settings and its privacy terms. Vellum does not send library content to the developer's servers.</p>
-<p>For HTTP(S) links already contained in a note, Vellum may use the system LinkPresentation framework to contact the linked website and retrieve metadata. The cached page title, canonical URL, and host name are keyed by the corresponding local note identifier. The cache does not contain the page body and is not included in library backups or exports.</p>
-<p>When recognizing text from a photo, camera, or the system text scanner, Vellum uses on-device system OCR capabilities. Images and recognized text are not sent to the developer's servers for OCR.</p>
-<p>To let you open content from device search, Vellum writes the title, topic, tags, and a text snippet of up to 240 characters to an on-device Spotlight index. It does not index full note bodies, images, or backup files.</p>
-<p>When you share text or a URL through the Share Extension and iOS cannot open Vellum directly, the extension temporarily stores the shared text or URL and its creation time in Vellum's App Group container. The main app consumes and clears these pending items after it next reads them.</p>
-<p>The App Store Release build does not create or upload capture diagnostics. Debug builds may store on-device aggregate counts and coarse timing buckets for up to 30 days; they contain no note content, images, links, tags, topics, identifiers, or precise timestamps and are never uploaded.</p>
-<p>You can delete individual notes or topics in Vellum. Items moved to Trash remain until you empty Trash or delete them permanently. Disconnect Notion separately in integration settings, and clear Debug diagnostics separately from Developer settings in a Debug build. Local rolling recovery backups, drafts, link-metadata caches, Notion export receipts, pending App Group share items, and system or Keychain records managed by iOS may outlive an in-app deletion until their own lifecycle overwrites, consumes, expires, or removes them. When a note containing images is permanently removed, unreferenced local image files may be moved to Vellum's app-internal quarantine. The current version has no in-app control to purge that quarantine; copies may remain until a later cleanup or until iOS removes the app container, and Vellum does not promise when cleanup occurs. iOS controls how other system storage is handled when the app is uninstalled; Vellum does not promise that uninstalling removes Keychain credentials. Exported backups and content sent to Notion must be deleted at their respective destinations.</p>
-<p>For privacy questions or support, contact <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>. Operator or contact: Yann.</p></div>
+        <div class="prose"><p>Effective date: July 30, 2026</p>
+<h2>At a glance</h2>
+<ul><li>On-device first — Notes, images, and backups stay on your device by default.</li><li>No tracking — No ads, no sale of personal data, and no cross-app tracking.</li><li>You choose — Content reaches Notion only when you connect or send it.</li></ul>
+<h2>01. Scope and core principle</h2>
+<p>This policy explains how the Vellum iOS app handles information created through your use of the app. Vellum is local-first and does not enable iCloud sync. The developer does not receive your library content except through the network features described here, files you deliberately export, or information you choose to send to support.</p>
+<h2>02. Information stored on your device</h2>
+<p>To provide capture, organization, search, recovery, and export, Vellum processes the following information in its app container, App Group, system settings, or Keychain:</p>
+<ul><li>Library content: topics, titles, note text, supplementary notes, tags, images, creation and update times, and Trash status.</li><li>Supporting data: preferences, drafts, rolling recovery backups, link-metadata caches, Notion credentials and export receipts, and pending shared items.</li><li>System features: Spotlight indexes only titles, topics, tags, and snippets of up to 240 characters. On-device OCR processes photos or camera images without uploading them for recognition. Release builds create no capture diagnostics.</li></ul>
+<h2>03. Network requests and support</h2>
+<p>Vellum has no advertising or behavioral analytics SDK and does not continuously upload usage records for profiling or marketing. The following actions make network requests when needed:</p>
+<ul><li>Link previews: the system LinkPresentation framework may contact HTTP(S) sites in a note to obtain a title, canonical URL, and host name. The destination and its providers may receive ordinary network information such as an IP address. Vellum does not cache page contents.</li><li>Support email: when you contact us, we receive the address, message, and attachments you choose to provide. We use them only to reply, investigate the issue, and meet necessary legal obligations. Do not send passwords, Notion access tokens, or unnecessary sensitive notes.</li></ul>
+<h2>04. Notion integration and OAuth broker</h2>
+<p>Notion is an optional third-party service. Only after you connect it does Vellum store authorization credentials and workspace identifiers. Only when you choose Send to Notion does Vellum transmit the selected topic's title, rendered Markdown, tags, and timing information to Notion. Images are represented by a count; image files are not uploaded. Notion handles this content under your account settings, its terms, and its privacy policy.</p>
+<p>To protect the Notion client secret, sign-in, refresh, and revocation pass through Vellum's OAuth broker running on Cloudflare. The authorization result is stored encrypted and deleted after one-time retrieval, for no longer than about five minutes. A hashed broker-session identifier plus workspace, owner, or bot identifiers may remain for up to 30 days. Hashed IP counters used to prevent abuse remain for about five minutes. The broker receives no Vellum notes or images and does not log tokens, authorization codes, or note content.</p>
+<h2>05. Sharing, advertising, and tracking</h2>
+<p>Vellum does not sell or rent personal data, show third-party ads, or combine in-app data with other companies' data for cross-app or cross-site tracking. Information is shared only as needed with Apple's system services, linked sites, Notion, Cloudflare OAuth infrastructure, or an export destination you choose, at your direction, unless disclosure is legally required.</p>
+<h2>06. Retention, security, and deletion</h2>
+<p>Vellum uses platform protections such as the iOS app sandbox, Keychain, and encrypted transport, but no storage or transmission method can be guaranteed absolutely secure. Notes moved to Trash remain until you empty it or delete them permanently. Disconnect Notion separately in integration settings. Delete exported files and content already sent to Notion at their respective destinations.</p>
+<p>Local rolling backups, drafts, link caches, export receipts, pending shared items, and iOS-managed indexes or Keychain records may outlive deletion of an item until they are overwritten, consumed, expire, or are removed by the system. After permanent deletion of a note with images, unreferenced images may enter an app-internal quarantine and remain until later cleanup or removal of the app container by iOS. The current version has no separate control to purge that quarantine.</p>
+<h2>07. Your choices and rights</h2>
+<p>You can view, edit, export, and delete your library in the app; disable system permissions such as Spotlight or Camera; decline or disconnect Notion; and stop using Vellum by uninstalling it. Because your main library stays on your device, the developer generally cannot access, correct, or delete it for you. To ask about information involved in support email or the OAuth broker, or to exercise rights under applicable law, contact the address below. Reasonable verification may be required.</p>
+<h2>08. Children, changes, and contact</h2>
+<p>Vellum is a general-purpose personal note tool. It is not directed to children below the digital-consent age in their location and does not ask users to create an account or provide an age. Minors should use it with a parent or guardian's guidance. Contact us if you believe a child provided information through support or a network integration.</p>
+<p>If a feature or data practice changes materially, we will update this policy and its effective date and provide notice through app release notes or another appropriate method. Review it again after significant updates.</p>
+<p>For privacy questions, requests under applicable law, or support, contact <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>. Operator or contact: Yann.</p></div>
       </article>
 <article class="localized document" data-copy-lang="ja">
         <p class="eyebrow">Vellum 1.0 対応</p>
         <h1>Vellum プライバシーポリシー</h1>
-        <p class="document-intro">Vellumが端末内にコンテンツを保存する方法と、Notionやリンク先サイトと通信する場合について説明します。</p>
+        <p class="document-intro">あなたの言葉はあなたのものです。Vellumがデバイスに保存する情報と、通信が発生する操作について説明します。</p>
         <div class="document-meta">
           <span>運営者: Yann</span>
           <span>連絡先: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
         </div>
-        <div class="prose"><p>施行日：2026年7月29日</p>
-<p>Vellumは、テーマ、テキストノート、画像、タグを含むライブラリに加え、環境設定と自動作成される端末内の復元用バックアップをデバイスに保存します。iCloud同期は使用しません。完全なバックアップを任意の場所へ書き出すこともできます。書き出したファイルはユーザー自身の管理下に置かれ、Vellumでは管理されません。</p>
-<p>Notionに接続すると、VellumはOAuth認証情報、ワークスペース情報、Vellumライブラリの保存先識別子をキーチェーンまたはAppの設定に保存します。接続時に、Notionワークスペース内へ「Vellum」というページと「Library」というデータベースを作成する場合があります。</p>
-<p>ユーザーが「Notionへ送信」を選んだ場合に限り、VellumはNotionのサービスを通じて、選択したテーマのページタイトルと変換済みMarkdownを送信します。Markdownにはテーマのサブタイトル、タグ、作成日時、更新日時のほか、各ノートの本文、補足メモ、タグ、作成日時が含まれます。画像がある場合は枚数を示す文章だけが含まれ、現在のNotion連携では画像ファイルや画像データをアップロードしません。送信内容は、接続先アカウントの設定とNotionのプライバシー条件に基づいてNotionが処理・保存します。Vellumがライブラリ内容を開発者のサーバーへ送信することはありません。</p>
-<p>ノート内のHTTP(S)リンクについて、VellumはシステムのLinkPresentationフレームワークを使用してリンク先へアクセスし、メタデータを取得することがあります。キャッシュするページタイトル、正規化URL、ホスト名は、対応する端末内ノートの識別子をキーとして保存します。Webページ本文は保存せず、ライブラリのバックアップや書き出しにも含めません。</p>
-<p>写真、カメラ、またはシステムのテキストスキャナから文字を認識する際は、デバイス上のシステムOCR機能を使用します。OCRのために画像や認識結果を開発者のサーバーへ送信することはありません。</p>
-<p>デバイス検索から内容を開けるようにするため、Vellumはタイトル、所属テーマ、タグ、および最大240文字の本文抜粋を端末内のSpotlight索引へ登録します。ノート全文、画像、バックアップファイルは登録しません。</p>
-<p>Share ExtensionからテキストまたはURLを共有した際にiOSがVellumを直接開けない場合、共有内容と作成日時をVellumのApp Groupコンテナへ一時保存します。メインAppが次回読み込んだ後、保留中の項目を取り込んで消去します。</p>
-<p>App Store向けのReleaseビルドは、キャプチャ診断データを作成せず、アップロードもしません。Debugビルドのみ、集計値とおおまかな所要時間帯を端末内に最大30日間保存することがあります。ノート内容、画像、リンク、タグ、テーマ、識別子、正確な時刻は含まれず、アップロードもされません。</p>
-<p>Vellumではノートやテーマを個別に削除できます。ゴミ箱へ移動した内容は、ゴミ箱を空にするか完全に削除するまで残ります。Notionとの接続は連携設定から、Debug診断はDebugビルドの開発者設定から、それぞれ個別に消去してください。端末内の世代別復元バックアップ、下書き、リンクメタデータのキャッシュ、Notionの書き出し履歴、App Groupに保留中の共有項目、iOSが管理するシステム領域やキーチェーンの記録は、App内で項目を削除した後も、それぞれの仕組みによって上書き、取り込み、期限切れ、または消去されるまで残る場合があります。画像を含むノートを完全に削除すると、参照されなくなった端末内の画像ファイルがVellumのApp内部の隔離領域へ移されることがあります。現在のバージョンにはこの隔離領域を消去するApp内操作がなく、コピーは後のクリーンアップまたはiOSによるAppコンテナの削除まで残る場合があります。Vellumはクリーンアップ時期を保証しません。Appをアンインストールした際のその他のシステム領域の扱いはiOSが管理するため、キーチェーン内の認証情報が削除されることをVellumは保証しません。書き出したバックアップとNotionへ送信済みの内容は、それぞれの保存先で削除してください。</p>
-<p>プライバシーに関する質問またはサポートについては、<a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>までご連絡ください。運営者または担当者：Yann。</p></div>
+        <div class="prose"><p>施行日：2026年7月30日</p>
+<h2>要点</h2>
+<ul><li>デバイス優先 — ノート、画像、バックアップは原則としてデバイス内に保存されます。</li><li>トラッキングなし — 広告表示、個人データの販売、Appをまたぐトラッキングは行いません。</li><li>あなたが選択 — 接続または送信を選んだ場合にのみ、内容がNotionへ送られます。</li></ul>
+<h2>01. 適用範囲と基本方針</h2>
+<p>本ポリシーは、Vellum iOS Appの利用中に生じる情報の取扱いを説明します。Vellumはデバイス内保存を基本とし、iCloud同期を有効にしません。ここに記載する通信機能、ユーザーが意図して書き出したファイル、またはサポートへ送信した情報を除き、開発者がライブラリ内容を取得することはありません。</p>
+<h2>02. デバイスに保存する情報</h2>
+<p>記録、整理、検索、復元、書き出し機能を提供するため、VellumはAppコンテナ、App Group、システム設定、またはキーチェーンで次の情報を処理します。</p>
+<ul><li>ライブラリ内容：テーマ、タイトル、本文、補足メモ、タグ、画像、作成・更新日時、ゴミ箱の状態。</li><li>補助データ：環境設定、下書き、世代別復元バックアップ、リンクメタデータのキャッシュ、Notion認証情報と書き出し履歴、保留中の共有項目。</li><li>システム機能：Spotlightにはタイトル、テーマ、タグ、最大240文字の抜粋のみを登録します。写真やカメラ画像のOCRはデバイス上で行い、文字認識のために画像をアップロードしません。Releaseビルドはキャプチャ診断を作成しません。</li></ul>
+<h2>03. 通信とサポート連絡</h2>
+<p>Vellumには広告SDKや行動分析SDKがなく、プロファイリングやマーケティングのために利用記録を継続送信することもありません。次の操作では必要に応じて通信が発生します。</p>
+<ul><li>リンクプレビュー：システムのLinkPresentationがノート内のHTTP(S)サイトへアクセスし、タイトル、正規URL、ホスト名を取得することがあります。接続先とその事業者にはIPアドレスなど通常の通信情報が伝わる場合があります。Vellumはページ本文をキャッシュしません。</li><li>サポートメール：お問い合わせ時には、ユーザーが提供したメールアドレス、本文、添付ファイルを受け取ります。返信、問題調査、必要な法的義務への対応にのみ使用します。パスワード、Notionアクセストークン、不要な機密ノートは送らないでください。</li></ul>
+<h2>04. Notion連携とOAuthブローカー</h2>
+<p>Notionは任意の第三者サービスです。接続を選んだ場合にのみ、Vellumは認証情報とワークスペース識別子を保存します。「Notionへ送信」を選んだ場合にのみ、選択したテーマのタイトル、変換済みMarkdown、タグ、日時情報をNotionへ送信します。画像は枚数のみを示し、画像ファイルはアップロードしません。Notionはアカウント設定、規約、プライバシーポリシーに従ってこれらを処理します。</p>
+<p>Notionのクライアントシークレットを保護するため、ログイン、更新、認証解除はCloudflare上で稼働するVellumのOAuthブローカーを経由します。認証結果は暗号化して保存し、一度取得されると削除され、保存は最長約5分です。ブローカーセッションのハッシュ識別子とワークスペース、所有者、Botの識別子は最長30日、乱用防止用のIPアドレスのハッシュ集計は約5分保持される場合があります。ブローカーはVellumのノートや画像を受信せず、トークン、認証コード、ノート内容をログに記録しません。</p>
+<h2>05. 共有、広告、トラッキング</h2>
+<p>Vellumは個人データを販売・貸与せず、第三者広告を表示せず、App内データを他社データと組み合わせてAppやWebサイトをまたぐトラッキングに使用しません。法令により必要な場合を除き、ユーザーが指示した機能に必要な範囲で、Appleのシステムサービス、リンク先サイト、Notion、CloudflareのOAuth基盤、または選択した書き出し先とのみ情報を共有します。</p>
+<h2>06. 保持期間、セキュリティ、削除</h2>
+<p>VellumはiOSのAppサンドボックス、キーチェーン、暗号化通信などの保護機能を使用しますが、保存や通信の絶対的な安全性を保証できる方法はありません。ゴミ箱へ移したノートは、空にするか完全に削除するまで残ります。Notion連携は連携設定で別途解除し、書き出したファイルやNotionへ送信済みの内容はそれぞれの保存先で削除してください。</p>
+<p>端末内の世代別バックアップ、下書き、リンクキャッシュ、書き出し履歴、保留中の共有項目、iOS管理の索引やキーチェーン記録は、項目の削除後も上書き、取り込み、期限切れ、またはシステムによる削除まで残る場合があります。画像付きノートを完全に削除すると、参照されない画像がApp内部の隔離領域へ移り、後のクリーンアップまたはiOSによるAppコンテナ削除まで残る場合があります。現在のバージョンにはこの隔離領域を個別に消去する操作がありません。</p>
+<h2>07. 選択肢と権利</h2>
+<p>App内でライブラリの閲覧、編集、書き出し、削除を行い、Spotlightやカメラなどのシステム権限を無効にし、Notionに接続しない、または解除し、Appを削除して利用を終了できます。主要なライブラリはユーザーのデバイスにあるため、開発者が代わりにアクセス、訂正、削除することは通常できません。サポートメールやOAuthブローカーに関する情報の確認、または法令上の権利行使については、下記のアドレスへご連絡ください。合理的な本人確認をお願いする場合があります。</p>
+<h2>08. 未成年者、変更、お問い合わせ</h2>
+<p>Vellumは一般向けの個人ノートツールであり、居住地域のデジタル同意年齢未満の子どもを対象としておらず、アカウント作成や年齢入力も求めません。未成年者は保護者の指導のもとで利用してください。子どもがサポートや通信連携を通じて情報を提供したと思われる場合はご連絡ください。</p>
+<p>機能やデータ取扱いに重要な変更がある場合は、本ポリシーと施行日を更新し、Appのリリースノートなど適切な方法でお知らせします。重要なアップデート後に再度ご確認ください。</p>
+<p>プライバシーに関する質問、適用法上の権利行使、またはサポートについては、<a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>までご連絡ください。運営者または担当者：Yann。</p></div>
       </article>
 <article class="localized document" data-copy-lang="ko">
         <p class="eyebrow">Vellum 1.0용</p>
         <h1>Vellum 개인정보 처리방침</h1>
-        <p class="document-intro">Vellum이 기기에 콘텐츠를 저장하는 방식과 Notion 또는 링크된 웹사이트와 통신하는 경우를 설명합니다.</p>
+        <p class="document-intro">당신의 글은 당신의 것입니다. Vellum이 기기에 저장하는 정보와 네트워크 요청이 발생하는 작업을 안내합니다.</p>
         <div class="document-meta">
           <span>운영자: Yann</span>
           <span>연락처: <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a></span>
         </div>
-        <div class="prose"><p>시행일: 2026년 7월 29일</p>
-<p>Vellum은 주제, 텍스트 노트, 이미지, 태그가 포함된 라이브러리와 환경설정, 자동 생성되는 기기 내 복구 백업을 사용자의 기기에 저장합니다. iCloud 동기화는 사용하지 않습니다. 전체 백업을 원하는 위치로 내보낼 수도 있습니다. 내보낸 파일은 사용자가 직접 관리하며 더 이상 Vellum의 관리 대상이 아닙니다.</p>
-<p>Notion을 연결하면 Vellum은 OAuth 인증 정보, 워크스페이스 정보, Vellum 라이브러리 대상 식별자를 키체인 또는 앱 설정에 저장합니다. 연결 과정에서 Notion 워크스페이스에 ‘Vellum’ 페이지와 ‘Library’ 데이터베이스를 만들 수 있습니다.</p>
-<p>사용자가 ‘Notion으로 보내기’를 선택한 경우에만 Vellum은 Notion 서비스를 통해 선택한 주제의 페이지 제목과 변환된 Markdown을 전송합니다. Markdown에는 주제의 부제목, 태그, 작성·수정 시각과 각 노트의 본문, 보충 메모, 태그, 작성 시각이 포함됩니다. 이미지가 있는 노트에는 이미지 개수를 알리는 문구만 포함되며, 현재 Notion 통합에서는 이미지 파일이나 이미지 데이터를 업로드하지 않습니다. 전송된 콘텐츠는 연결된 계정 설정과 Notion의 개인정보 보호 조건에 따라 Notion이 처리하고 저장합니다. Vellum은 라이브러리 콘텐츠를 개발자 서버로 보내지 않습니다.</p>
-<p>노트에 포함된 HTTP(S) 링크의 경우 Vellum은 시스템 LinkPresentation 프레임워크를 사용해 링크된 웹사이트에 접속하고 메타데이터를 가져올 수 있습니다. 캐시되는 페이지 제목, 정규 URL, 호스트 이름은 해당 로컬 노트 식별자를 키로 저장됩니다. 웹페이지 본문은 저장하지 않으며 라이브러리 백업이나 내보내기에도 포함하지 않습니다.</p>
-<p>사진, 카메라 또는 시스템 텍스트 스캐너에서 문자를 인식할 때는 기기의 시스템 OCR 기능을 사용합니다. OCR을 위해 이미지나 인식 결과를 개발자 서버로 전송하지 않습니다.</p>
-<p>기기 검색에서 콘텐츠를 열 수 있도록 Vellum은 제목, 소속 주제, 태그, 최대 240자의 본문 일부를 기기 내 Spotlight 색인에 기록합니다. 노트 전체 본문, 이미지, 백업 파일은 색인에 기록하지 않습니다.</p>
-<p>Share Extension으로 텍스트나 URL을 공유했지만 iOS가 Vellum을 직접 열지 못한 경우, 공유 내용과 작성 시각을 Vellum의 App Group 컨테이너에 임시 저장합니다. 메인 앱이 다음에 이를 읽은 후 대기 중인 항목을 가져오고 지웁니다.</p>
-<p>App Store용 Release 빌드는 캡처 진단 데이터를 생성하거나 업로드하지 않습니다. Debug 빌드에서만 집계 값과 대략적인 소요 시간 구간을 기기에 최대 30일 동안 저장할 수 있습니다. 여기에는 노트 내용, 이미지, 링크, 태그, 주제, 식별자, 정확한 시각이 포함되지 않으며 업로드되지 않습니다.</p>
-<p>Vellum에서는 노트나 주제를 개별적으로 삭제할 수 있습니다. 휴지통으로 이동한 콘텐츠는 휴지통을 비우거나 영구 삭제할 때까지 남습니다. Notion 연결은 통합 설정에서, Debug 진단은 Debug 빌드의 개발자 설정에서 각각 따로 지워야 합니다. 기기 내 순환 복구 백업, 초안, 링크 메타데이터 캐시, Notion 내보내기 기록, App Group에서 대기 중인 공유 항목, iOS가 관리하는 시스템 또는 키체인 기록은 앱에서 항목을 삭제한 후에도 각 저장소의 수명 주기에 따라 덮어쓰기, 가져오기, 만료 또는 삭제될 때까지 남을 수 있습니다. 이미지가 포함된 노트를 영구 삭제하면 더 이상 참조되지 않는 로컬 이미지 파일이 Vellum의 앱 내부 격리 영역으로 이동될 수 있습니다. 현재 버전에는 이 격리 영역을 비우는 앱 내 제어 기능이 없으며, 사본은 이후 정리 작업 또는 iOS가 앱 컨테이너를 제거할 때까지 남을 수 있습니다. Vellum은 정리 시점을 보장하지 않습니다. 앱을 제거할 때 그 밖의 시스템 저장 공간을 처리하는 방식은 iOS가 관리하므로 키체인 인증 정보까지 삭제된다고 Vellum은 보장하지 않습니다. 내보낸 백업과 Notion으로 보낸 콘텐츠는 각각의 저장 위치에서 삭제해야 합니다.</p>
-<p>개인정보 관련 문의 또는 지원은 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>로 연락해 주세요. 운영자 또는 담당자: Yann.</p></div>
+        <div class="prose"><p>시행일: 2026년 7월 30일</p>
+<h2>핵심 요약</h2>
+<ul><li>기기 우선 — 노트, 이미지와 백업은 기본적으로 기기에 저장됩니다.</li><li>추적 없음 — 광고, 개인정보 판매 및 앱 간 추적을 하지 않습니다.</li><li>사용자가 선택 — 연결하거나 전송하기로 선택한 경우에만 콘텐츠가 Notion으로 전송됩니다.</li></ul>
+<h2>01. 적용 범위와 기본 원칙</h2>
+<p>본 방침은 Vellum iOS 앱 사용 중 생성되는 정보의 처리 방법을 설명합니다. Vellum은 로컬 저장을 기본으로 하며 iCloud 동기화를 사용하지 않습니다. 여기에 명시된 네트워크 기능, 사용자가 직접 내보낸 파일 또는 지원팀에 보낸 정보를 제외하고 개발자는 라이브러리 콘텐츠를 받지 않습니다.</p>
+<h2>02. 기기에 저장되는 정보</h2>
+<p>기록, 정리, 검색, 복구 및 내보내기 기능을 제공하기 위해 Vellum은 앱 컨테이너, App Group, 시스템 설정 또는 키체인에서 다음 정보를 처리합니다.</p>
+<ul><li>라이브러리 콘텐츠: 주제, 제목, 본문, 보충 메모, 태그, 이미지, 생성·수정 시각 및 휴지통 상태.</li><li>보조 데이터: 환경설정, 초안, 순환 복구 백업, 링크 메타데이터 캐시, Notion 인증 정보와 내보내기 기록 및 대기 중인 공유 항목.</li><li>시스템 기능: Spotlight에는 제목, 주제, 태그와 최대 240자의 일부만 색인합니다. 사진이나 카메라 이미지의 OCR은 기기에서 처리하며 문자 인식을 위해 이미지를 업로드하지 않습니다. Release 빌드는 캡처 진단을 생성하지 않습니다.</li></ul>
+<h2>03. 네트워크 요청과 지원 문의</h2>
+<p>Vellum에는 광고 또는 행동 분석 SDK가 없으며 프로파일링이나 마케팅을 위해 사용 기록을 지속적으로 업로드하지 않습니다. 다음 작업은 필요할 때 네트워크 요청을 생성합니다.</p>
+<ul><li>링크 미리보기: 시스템 LinkPresentation이 노트의 HTTP(S) 사이트에 접속해 제목, 정규 URL과 호스트 이름을 가져올 수 있습니다. 대상 사이트와 제공업체는 IP 주소 같은 일반 네트워크 정보를 받을 수 있습니다. Vellum은 웹페이지 본문을 캐시하지 않습니다.</li><li>지원 이메일: 문의할 때 사용자가 제공한 이메일 주소, 본문과 첨부파일을 받습니다. 답변, 문제 조사와 필요한 법적 의무 이행에만 사용합니다. 비밀번호, Notion 액세스 토큰 또는 불필요한 민감한 노트를 보내지 마세요.</li></ul>
+<h2>04. Notion 통합과 OAuth 중계</h2>
+<p>Notion은 선택적으로 사용하는 제3자 서비스입니다. 사용자가 연결한 후에만 Vellum이 인증 정보와 워크스페이스 식별자를 저장합니다. ‘Notion으로 보내기’를 선택한 경우에만 선택한 주제의 제목, 변환된 Markdown, 태그와 시간 정보를 Notion으로 전송합니다. 이미지는 개수만 표시하며 이미지 파일은 업로드하지 않습니다. Notion은 계정 설정, 약관 및 개인정보 처리방침에 따라 이를 처리합니다.</p>
+<p>Notion 클라이언트 비밀키를 보호하기 위해 로그인, 갱신과 권한 해제는 Cloudflare에서 실행되는 Vellum OAuth 중계 서비스를 거칩니다. 인증 결과는 암호화해 저장하고 일회성 수신 후 삭제하며 최대 약 5분 유지됩니다. 중계 세션의 해시 식별자와 워크스페이스, 소유자 또는 봇 식별자는 최대 30일, 악용 방지용 IP 주소 해시 카운터는 약 5분 유지될 수 있습니다. 중계 서비스는 Vellum 노트나 이미지를 받지 않으며 토큰, 인증 코드 또는 노트 내용을 로그에 기록하지 않습니다.</p>
+<h2>05. 공유, 광고 및 추적</h2>
+<p>Vellum은 개인정보를 판매하거나 대여하지 않고 제3자 광고를 표시하지 않으며 앱 데이터를 다른 회사의 데이터와 결합해 앱이나 웹사이트 간 추적에 사용하지 않습니다. 법률상 요구되는 경우를 제외하고 사용자가 지시한 기능에 필요한 범위에서만 Apple 시스템 서비스, 링크된 사이트, Notion, Cloudflare OAuth 인프라 또는 사용자가 선택한 내보내기 대상과 정보를 공유합니다.</p>
+<h2>06. 보관, 보안 및 삭제</h2>
+<p>Vellum은 iOS 앱 샌드박스, 키체인과 암호화 전송 같은 플랫폼 보호 기능을 사용하지만 어떤 저장 또는 전송 방식도 절대적인 안전을 보장할 수 없습니다. 휴지통으로 옮긴 노트는 휴지통을 비우거나 영구 삭제할 때까지 남습니다. Notion 연결은 통합 설정에서 별도로 해제하고 내보낸 파일과 Notion으로 보낸 콘텐츠는 각각의 저장 위치에서 삭제해야 합니다.</p>
+<p>로컬 순환 백업, 초안, 링크 캐시, 내보내기 기록, 대기 중인 공유 항목과 iOS가 관리하는 색인 또는 키체인 기록은 덮어쓰기, 가져오기, 만료 또는 시스템 삭제 전까지 항목 삭제 후에도 남을 수 있습니다. 이미지가 있는 노트를 영구 삭제하면 참조되지 않는 이미지가 앱 내부 격리 영역으로 이동해 이후 정리 또는 iOS의 앱 컨테이너 제거 시까지 남을 수 있습니다. 현재 버전에는 이 격리 영역을 별도로 지우는 기능이 없습니다.</p>
+<h2>07. 사용자의 선택과 권리</h2>
+<p>앱에서 라이브러리를 확인, 수정, 내보내기 및 삭제하고 Spotlight나 카메라 같은 시스템 권한을 끄며 Notion을 연결하지 않거나 해제하고 앱을 삭제해 사용을 중단할 수 있습니다. 주요 라이브러리는 사용자의 기기에 있으므로 개발자가 대신 접근, 정정 또는 삭제할 수 없는 경우가 일반적입니다. 지원 이메일이나 OAuth 중계 정보에 관해 문의하거나 관련 법률에 따른 권리를 행사하려면 아래 주소로 연락해 주세요. 합리적인 확인 절차가 필요할 수 있습니다.</p>
+<h2>08. 미성년자, 변경 및 문의</h2>
+<p>Vellum은 범용 개인 기록 도구로서 거주 지역의 디지털 동의 연령 미만 아동을 대상으로 하지 않으며 계정 생성이나 연령 입력을 요구하지 않습니다. 미성년자는 부모나 보호자의 지도 아래 사용해야 합니다. 아동이 지원 또는 네트워크 통합을 통해 정보를 제공했다고 생각되면 연락해 주세요.</p>
+<p>기능이나 데이터 처리 방식에 중대한 변경이 생기면 본 방침과 시행일을 업데이트하고 앱 릴리스 노트 또는 적절한 방식으로 안내합니다. 중요한 업데이트 후 다시 확인해 주세요.</p>
+<p>개인정보 관련 문의, 관련 법률에 따른 권리 행사 또는 지원은 <a href="mailto:yesiyang@outlook.com">yesiyang@outlook.com</a>로 연락해 주세요. 운영자 또는 담당자: Yann.</p></div>
       </article>
   </main>
     <footer>
